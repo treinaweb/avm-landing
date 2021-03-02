@@ -1,5 +1,6 @@
 html {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -23,18 +24,32 @@ p {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+
 :root {
     --branco: #ffffff;
     --azul-escuro: #1c1c2e;
     --azul-escuro2: #33334d;
     --rosa: #e93f8c;
     --azul: #4deae4;
+    --azul-2: #31c2bd;
     --roxo: #8f60ed;
     --cinza: #f4f4f4;
+    --cinza-3: #828282;
     --roxo-escuro: #2b163f;
 
     --cabecalho-cor: var(--azul-escuro);
     --rodape-cor: var(--azul-escuro);
+    --gradiente-roxo: linear-gradient(
+        180deg,
+        var(--roxo-escuro) 0%,
+        #8f60ed00 100%
+    );
 }
 
 /* HEADER
@@ -48,6 +63,20 @@ p {
 
 /* APRESENTACAO
 *************/
+
+.formulario-final.apresentacao {
+    background-color: var(--roxo-escuro);
+    padding-bottom: 32px;
+}
+
+.formulario-final.apresentacao::before,
+.formulario-final.apresentacao::after {
+    content: initial;
+}
+
+.formulario-final.apresentacao .formulario-container {
+    background: linear-gradient(180deg, #33334d 0%, rgba(51, 51, 77, 0) 100%);
+}
 
 /* PREVIA
 *************/
@@ -80,13 +109,14 @@ p {
 
 .previa::before {
     background-image: url('./img/background-icons.svg');
+    background-attachment: fixed;
     opacity: 0.07;
     z-index: 2;
 }
 
 .previa::after {
     content: '';
-    background: linear-gradient(180deg, var(--roxo-escuro) 0%, #8f60ed00 100%);
+    background: var(--gradiente-roxo);
     z-index: 3;
 }
 
@@ -109,6 +139,85 @@ p {
 
 /* AGENDA
 *************/
+
+.agenda {
+    color: var(--roxo-escuro);
+    padding: 126px 12px 134px;
+    background-color: var(--cinza);
+}
+
+.agenda-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    max-width: 971px;
+    margin: 0 auto;
+    gap: 89px 0;
+}
+
+.agenda-item {
+    display: flex;
+    flex-flow: column;
+    gap: 54px;
+    max-width: 371px;
+}
+
+.agenda-item .agenda-item {
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.agenda-date {
+    background-color: var(--azul-escuro2);
+    color: var(--azul);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    border-radius: 28px;
+    padding: 6px;
+}
+.agenda-date.live {
+    background-color: var(--rosa);
+    color: var(--azul-escuro2);
+}
+
+.agenda-date.mini {
+    width: 170px;
+    align-self: start;
+    display: inline-block;
+}
+
+.agenda-title {
+    font-size: 36px;
+    font-weight: 900;
+    min-height: 176px;
+}
+
+.agenda-description {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.agenda-link {
+    width: 100%;
+    max-width: 616px;
+    height: 77px;
+    background-color: var(--azul);
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 24px;
+    padding: 19px 115px;
+    border-radius: 5px;
+    box-shadow: 0 8px var(--azul-2);
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 1.8;
+}
+
+.agenda-link:hover {
+    opacity: 0.8;
+}
 
 /* ELENCO
 *************/
@@ -191,6 +300,7 @@ p {
 
 .formulario-final::before {
     background-image: url('./img/background-icons.svg');
+    background-attachment: fixed;
     opacity: 0.07;
     z-index: 2;
 }
@@ -237,6 +347,154 @@ p {
 
 .formulario-final-descricao li img {
     justify-self: center;
+}
+
+/* FORM
+*************/
+
+.formulario-container {
+    position: relative;
+    z-index: 5;
+    background: var(--gradiente-roxo);
+    border-radius: 11px;
+    padding: 41px 46px;
+    text-align: center;
+    border: 1px solid var(--azul-escuro);
+}
+
+.formulario-container::before,
+.formulario-container::after {
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 54px;
+}
+
+.formulario-container::before {
+    background-image: url('./img/shapes/Vector-1.svg');
+    top: -27px;
+    left: -27px;
+}
+.formulario-container::after {
+    background-image: url('./img/shapes/Vector-2.svg');
+    right: -27px;
+    bottom: -27px;
+}
+
+.formulario-titulo {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 45px;
+}
+
+.input-container {
+    background-color: var(--azul-escuro);
+    border-radius: 5px;
+    margin-bottom: 23px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 29px 1fr;
+    gap: 19px;
+    padding: 20px 25px;
+}
+
+.input-container input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.input-container input::placeholder {
+    color: var(--cinza-3);
+    font-size: 18px;
+}
+
+.input-container input:focus {
+    /* outline-color: rgba(255, 255, 255, 0.3); */
+    /* outline-style: solid; */
+    outline: none;
+}
+
+.formulario-container button {
+    background-color: var(--azul);
+    color: var(--azul-escuro);
+    font-weight: 900;
+    font-size: 24px;
+    border: none;
+    padding: 19px 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 8px var(--azul-escuro);
+}
+
+.form-security-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.form-list-item {
+    display: flex;
+    max-width: 169px;
+    align-content: center;
+    text-align: left;
+    gap: 12px;
+}
+
+.checkbox-container {
+    margin-top: 23px;
+    font-size: 14px;
+    font-weight: 400;
+
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container .checkmark {
+    position: relative;
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    margin-right: 8px;
+    background-color: var(--azul-escuro2);
+    border-radius: 4px;
+    vertical-align: middle;
+    border: 2px solid var(--cinza-3);
+}
+
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark::after {
+    display: block;
+}
+.checkbox-container .checkmark::after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 /* FOOTER
