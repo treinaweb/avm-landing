@@ -1,0 +1,113 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --branco: #ffffff;
+    --azul-escuro: #1c1c2e;
+    --azul-escuro2: #33334d;
+    --rosa: #e93f8c;
+    --azul: #4deae4;
+    --roxo: #8f60ed;
+    --cinza: #f4f4f4;
+    --roxo-escuro: #2b163f;
+
+    --cabecalho-cor: var(--azul-escuro);
+    --rodape-cor: var(--azul-escuro);
+}
+
+.header {
+    background-color: var(--cabecalho-cor);
+    padding: 11px;
+    text-align: center;
+}
+
+.footer {
+    padding: 92px 12px 0;
+    text-align: center;
+    background-color: var(--rodape-cor);
+    color: var(--branco);
+}
+
+.footer-certificado {
+    gap: 40px;
+    padding: 39px 0 22px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-certificado,
+.footer-certificado-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-certificado-div {
+    width: 1px;
+    height: 54px;
+    background-color: var(--cinza);
+}
+
+.footer-certificado-nomes {
+    display: inline-block;
+    max-width: 320px;
+}
+
+.footer-certificado-logos {
+    gap: 30px;
+}
+
+.footer-descricao {
+    max-width: 800px;
+    height: 97px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.footer-div {
+    margin: 43px auto;
+    max-width: 970px;
+    border: 1px solid var(--azul-escuro2);
+}
+
+.social-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    position: relative;
+    border: 2px solid var(--azul-escuro2);
+    border-radius: 50px;
+    width: 51px;
+    height: 51px;
+}
+
+.social-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tw-footer {
+    padding: 33px 0 71px;
+    font-size: 12px;
+}
