@@ -121,7 +121,7 @@ button:hover {
 }
 
 .previa h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .previa h2,
@@ -171,7 +171,7 @@ button:hover {
     background-color: var(--azul-escuro2);
     color: var(--azul);
     text-align: center;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
     border-radius: 28px;
     padding: 6px;
@@ -188,13 +188,13 @@ button:hover {
 }
 
 .agenda-title {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
     min-height: 176px;
 }
 
 .agenda-description {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 
@@ -206,7 +206,7 @@ button:hover {
     color: var(--azul-escuro);
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 19px 115px;
     border-radius: 5px;
     box-shadow: 0 8px var(--azul-2);
@@ -229,7 +229,7 @@ button:hover {
 }
 
 .elenco-titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
     text-align: center;
     margin-bottom: 78px;
@@ -256,13 +256,13 @@ button:hover {
 }
 
 .elenco-nome {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
     margin-bottom: 27px;
 }
 
 .elenco-descricao {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 
@@ -321,17 +321,17 @@ button:hover {
 }
 
 .formulario-final-descricao h2 {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 900;
 }
 
 .formulario-final-descricao p {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .formulario-final-descricao ul {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 900;
     display: flex;
     gap: 33px;
@@ -382,7 +382,7 @@ button:hover {
 }
 
 .formulario-titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 900;
     margin-bottom: 45px;
 }
@@ -405,7 +405,7 @@ button:hover {
 }
 .input-container input::placeholder {
     color: var(--cinza-3);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .input-container input:focus {
@@ -418,7 +418,7 @@ button:hover {
     background-color: var(--azul);
     color: var(--azul-escuro);
     font-weight: 900;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: none;
     padding: 19px 0;
     width: 100%;
@@ -431,7 +431,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 12px;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .form-list-item {
@@ -444,7 +444,7 @@ button:hover {
 
 .checkbox-container {
     margin-top: 23px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
 
     display: block;
@@ -510,7 +510,7 @@ button:hover {
 .footer-certificado {
     gap: 40px;
     padding: 39px 0 22px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -541,7 +541,7 @@ button:hover {
     max-width: 800px;
     height: 97px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .footer-div {
@@ -574,5 +574,5 @@ button:hover {
 
 .tw-footer {
     padding: 33px 0 71px;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
