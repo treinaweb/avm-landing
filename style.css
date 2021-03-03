@@ -59,6 +59,11 @@ button:hover {
     background-color: var(--cabecalho-cor);
     padding: 11px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 /* APRESENTACAO
@@ -67,6 +72,7 @@ button:hover {
 .formulario-final.apresentacao {
     background-color: var(--roxo-escuro);
     padding-bottom: 32px;
+    padding-top: 110px;
 }
 
 .formulario-final.apresentacao::before,
@@ -76,6 +82,7 @@ button:hover {
 
 .formulario-final.apresentacao .formulario-container {
     background: linear-gradient(180deg, #33334d 0%, rgba(51, 51, 77, 0) 100%);
+    border-color: #33334d;
 }
 
 /* PREVIA
@@ -165,7 +172,7 @@ button:hover {
 .agenda-item {
     display: flex;
     flex-flow: column;
-    gap: 54px;
+    gap: 18px;
     max-width: 371px;
 }
 
@@ -362,7 +369,7 @@ button:hover {
 .formulario-container {
     position: relative;
     z-index: 5;
-    background: var(--gradiente-roxo);
+    background: linear-gradient(180deg, #33334d 0%, rgba(51, 51, 77, 0) 100%);
     border-radius: 11px;
     padding: 41px 46px;
     text-align: center;
@@ -597,7 +604,7 @@ button:hover {
     }
 
     .formulario-final.apresentacao {
-        padding-top: 0;
+        padding-top: 20px;
     }
 
     .formulario-final.apresentacao h1 {
