@@ -452,6 +452,7 @@ button:hover {
     display: flex;
     max-width: 169px;
     align-content: center;
+    align-items: center;
     text-align: left;
     gap: 12px;
 }
@@ -591,20 +592,54 @@ button:hover {
     font-size: 0.75rem;
 }
 
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
 @media (max-width: 820px) {
     html {
         font-size: 12px;
+    }
+
+    .desktop-only {
+        display: none;
     }
 
     .previa,
     .elenco,
     .formulario-final,
     .agenda {
-        padding: 40px 12px;
+        padding: 31px 12px;
     }
 
     .formulario-final.apresentacao {
-        padding-top: 20px;
+        padding-top: 80px;
     }
 
     .formulario-final.apresentacao h1 {
@@ -614,11 +649,40 @@ button:hover {
         max-width: 250px;
     }
 
+    .formulario-final-descricao p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .formulario-final ul {
+        gap: 9px;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .formulario-final li {
+        gap: 9px;
+        font-size: 12px;
+        grid-template-columns: 40px 1fr;
+    }
+
+    .formulario-final-descricao li:nth-child(1) img {
+        width: 23px;
+    }
+    .formulario-final-descricao li:nth-child(2) img {
+        /* width: 20px; */
+    }
+
     .previa h2,
     .elenco h2,
     .formulario-final h2,
     .agenda h2 {
-        font-size: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .previa {
+        gap: 52px;
     }
 
     .previa iframe {
@@ -629,20 +693,43 @@ button:hover {
     }
 
     .agenda-container {
-        gap: 50px;
+        gap: 42px;
     }
 
     .agenda-title {
-        font-size: 17px;
+        font-size: 24px;
         min-height: initial;
     }
 
     .agenda-date {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 12px;
     }
 
     .agenda-item {
         gap: 12px;
+        text-align: center;
+    }
+
+    .agenda-item ul li .mini {
+        align-self: center;
+    }
+
+    .agenda-item .agenda-item .agenda-description {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .agenda-item ul .agenda-item {
+        background-color: var(--azul-escuro2);
+        border-radius: 10px;
+        color: var(--branco);
+        padding: 23px 15px 36px;
+        gap: 0;
+    }
+
+    .agenda ul ~ div {
+        margin-top: 12px !important;
     }
 
     .agenda-link {
@@ -651,27 +738,54 @@ button:hover {
         height: auto;
     }
 
+    .elenco {
+        padding-bottom: 60px;
+    }
+
     .elenco-quadro {
         background-size: contain;
-        width: 190px;
-        height: 190px;
+        width: 152px;
+        height: 152px;
         margin: 0 auto;
     }
 
     .elenco-quadro img {
-        width: 120px;
-        height: 120px;
+        width: 106px;
+        height: 106px;
         object-fit: contain;
     }
 
     .elenco-div {
-        margin: 35px auto;
+        margin: 30px auto 0;
     }
 
     .elenco-item,
     .certificado-title-container {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 24px;
+        justify-items: center;
+    }
+
+    .elenco-titulo {
+        margin-bottom: 45px;
+    }
+
+    .elenco-nome,
+    .elenco-descricao {
+        text-align: center;
+    }
+
+    .elenco-nome {
+        font-size: 24px;
+    }
+
+    .elenco-descricao {
+        font-size: 14px;
+    }
+
+    .formulario-titulo {
+        font-size: 24px;
+        margin-bottom: 25px;
     }
 
     .formulario-container button,
@@ -679,8 +793,58 @@ button:hover {
         gap: 50px;
     }
 
-    .formulario-container::before,
+    .formulario-container {
+        padding: 24px 14px;
+    }
+
+    .formulario-container::before {
+        top: -1px;
+        left: -1px;
+    }
     .formulario-container::after {
-        content: initial;
+        right: -1px;
+        bottom: -1px;
+    }
+
+    .input-container {
+        padding: 10px 15px;
+        margin-bottom: 16px;
+    }
+
+    .formulario-container button {
+        font-size: 18px;
+    }
+
+    .form-list-item img {
+        width: 20px;
+    }
+
+    .formulario-container .footer-div {
+        margin: 22px 0;
+    }
+
+    .formulario-final {
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .footer img:first-child {
+        width: 157px;
+    }
+
+    .footer {
+        padding-top: 46px;
+        text-align: center;
+    }
+
+    .footer .social-list img {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+@media (max-width: 430px) {
+    .formulario-final > ul {
+        flex-flow: column;
     }
 }
